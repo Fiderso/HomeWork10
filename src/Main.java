@@ -1,13 +1,73 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.Arrays;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+
+        int[] firstArray = new int[]{1, 2, 3}; // Задача 1
+        double[] secondArray = {1.57, 7.654, 9.986};
+        int[] thirdArray = {10, 20, 30, 40, 50};
+
+        System.out.println();
+
+        for (int i = 0; i < firstArray.length; i++) { // Задача 2
+            System.out.print(firstArray[i]);
+            if (i < firstArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        for (int i = 0; i < secondArray.length; i++) {
+            System.out.print(secondArray[i]);
+            if (i < secondArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        for (int i = 0; i < thirdArray.length; i++) {
+            System.out.print(thirdArray[i]);
+            if (i < thirdArray.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        System.out.println();
+
+        for (int i = firstArray.length - 1; i >= 0; i--) { // Задача 3
+            System.out.print(firstArray[i]);
+
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        for (int i = secondArray.length - 1; i >= 0; i--) {
+            System.out.print(secondArray[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        for (int i = thirdArray.length - 1; i >= 0; i--) {
+            System.out.print(thirdArray[i]);
+            if (i > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+
+        System.out.println();
+
+        for (int i = 0; i < firstArray.length; i++) { // Задача 4
+            if (firstArray[i] % 2 != 0) {
+                firstArray[i] += 1;
+            }
+        }
+
+        System.out.println(Arrays.toString(firstArray));
     }
 }
